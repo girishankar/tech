@@ -1,0 +1,28 @@
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script>
+    //function my_function() {
+    //  console.log("reloading...");
+    //  $('#refresh').load(location.href);
+   // }
+   //setTimeout(function(){
+   //window.location.reload(1);
+   //}, 5000);
+   
+   window.onload = function() {
+   	setInterval(function refreshprintdiv() {
+            //document.getElementById('frame1').contentDocument.reload(true);
+            var iframe = document.getElementById('frame1');
+						iframe.src = iframe.src;
+        }, 10000);
+    }
+  </script>
+</head>
+<body>
+  <div id="refresh"></div>
+  <div id="printdiv">
+    <p><iframe id = "frame1" src="program.html" frameborder="0" width="95%"></iframe></p>
+  </div>  
+</body>
+</html>
